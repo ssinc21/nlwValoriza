@@ -1,0 +1,19 @@
+/**
+ * GET => Buscar uma informação
+ * POST => Inserir (criar) uma informação
+ * PUT => Alterar uma informação
+ * DELETE = > Remover um dado
+ * PATCH => Alterar uma informação específica
+ */
+
+/**
+ * Tipos de parâmetros
+ * Routes Params => http://localhost:3000/produtos/102398129038201 esse número seria o ID do produto na busca.
+ * 
+ * Query Params => http://localhost:3000/produtos?name=teclado&description=tecladovermelho
+ * 
+ * Body Params => {
+ *  "name":"teclado",
+ *  "description":"teclado bom"
+ * }
+ */
