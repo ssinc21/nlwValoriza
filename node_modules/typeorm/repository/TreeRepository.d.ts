@@ -1,5 +1,6 @@
 import { Repository } from "./Repository";
 import { SelectQueryBuilder } from "../query-builder/SelectQueryBuilder";
+import { FindTreeOptions } from "../find-options/FindTreeOptions";
 /**
  * Repository with additional functions to work with trees.
  *
@@ -9,11 +10,11 @@ export declare class TreeRepository<Entity> extends Repository<Entity> {
     /**
      * Gets complete trees for all roots in the table.
      */
-    findTrees(): Promise<Entity[]>;
+    findTrees(options?: FindTreeOptions): Promise<Entity[]>;
     /**
      * Roots are entities that have no ancestors. Finds them all.
      */
-    findRoots(): Promise<Entity[]>;
+    findRoots(options?: FindTreeOptions): Promise<Entity[]>;
     /**
      * Gets all children (descendants) of the given entity. Returns them all in a flat array.
      */
@@ -21,7 +22,7 @@ export declare class TreeRepository<Entity> extends Repository<Entity> {
     /**
      * Gets all children (descendants) of the given entity. Returns them in a tree - nested into each other.
      */
-    findDescendantsTree(entity: Entity): Promise<Entity>;
+    findDescendantsTree(entity: Entity, options?: FindTreeOptions): Promise<Entity>;
     /**
      * Gets number of descendants of the entity.
      */
