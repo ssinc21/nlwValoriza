@@ -9,14 +9,17 @@ class Car {
     readonly id: string;
 
     @Column()
-    name: string;
+    name_car: string;
 
     @Column()
-    brand: string;
+    car_brand: string;
+
+    @Column()
+    user_id: string;
 
     @JoinColumn({ name: "user_id" })
     @ManyToOne(() => User)
-    user_id: User;
+    userId: User;
 
     constructor() {
         if (!this.id) {
