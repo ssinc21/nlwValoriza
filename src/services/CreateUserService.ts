@@ -33,7 +33,7 @@ class CreateUserService {
         });
 
         await usersRepository.save(user);
-
+        
         return user;
     }
 }
