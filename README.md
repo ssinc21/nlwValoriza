@@ -1,5 +1,5 @@
 # nlwValoriza
-Projeto desenvolvido em NodeJS
+As rotas estão sendo utilizadas somente o método POST. 
 
 #Aplicações e aprendizado:
 - Node.Js
